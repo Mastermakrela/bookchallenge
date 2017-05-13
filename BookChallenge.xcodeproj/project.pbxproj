@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111CF2601EBF443B006AFDC3 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111CF25F1EBF443B006AFDC3 /* GlobalVariables.swift */; };
+		111F02651EBFAE7A002A819D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F02641EBFAE7A002A819D /* LoginViewController.swift */; };
 		118FD92F1D81DF210098161B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118FD92E1D81DF210098161B /* AppDelegate.swift */; };
-		118FD9311D81DF210098161B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118FD9301D81DF210098161B /* FirstViewController.swift */; };
-		118FD9331D81DF210098161B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118FD9321D81DF210098161B /* SecondViewController.swift */; };
+		118FD9311D81DF210098161B /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118FD9301D81DF210098161B /* StatusViewController.swift */; };
 		118FD9361D81DF220098161B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118FD9341D81DF220098161B /* Main.storyboard */; };
 		118FD9381D81DF220098161B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 118FD9371D81DF220098161B /* Assets.xcassets */; };
 		118FD93B1D81DF220098161B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118FD9391D81DF220098161B /* LaunchScreen.storyboard */; };
 		118FD9461D81DF220098161B /* BookChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118FD9451D81DF220098161B /* BookChallengeTests.swift */; };
+		118FD9511D81E3A00098161B /* MyBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118FD9501D81E3A00098161B /* MyBooksViewController.swift */; };
+		118FD9531D81EE100098161B /* ChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118FD9521D81EE100098161B /* ChallengeTableViewCell.swift */; };
+		11C7A29C1D8DB36500155CD6 /* ChallengeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7A29B1D8DB36500155CD6 /* ChallengeTableViewController.swift */; };
+		11C7A2A11D8DB96900155CD6 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7A2A01D8DB96900155CD6 /* Challenge.swift */; };
+		11EC79741EC5C8F0001F30E7 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EC79731EC5C8F0001F30E7 /* AddBookViewController.swift */; };
+		11EEB2FF1EBE69700026F68D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EEB2FE1EBE69700026F68D /* Book.swift */; };
+		11EEB3011EBE6B6C0026F68D /* MyBooksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EEB3001EBE6B6C0026F68D /* MyBooksTableViewController.swift */; };
+		11EEB3031EBE6D950026F68D /* MyBooksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EEB3021EBE6D950026F68D /* MyBooksTableViewCell.swift */; };
+		11EEB3051EBE764E0026F68D /* SelectedBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EEB3041EBE764E0026F68D /* SelectedBookViewController.swift */; };
+		3BD91DE06ADB8C280C14EDE1 /* Pods_BookChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B696F56BCCEFB3F4A3DAAE15 /* Pods_BookChallenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,11 +37,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		11BE93CB1EB5CEFB005E0317 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0DC705AA98115247028F5B3E /* Pods-BookChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookChallenge/Pods-BookChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		111CF25F1EBF443B006AFDC3 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		111F02641EBFAE7A002A819D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		118FD92B1D81DF210098161B /* BookChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		118FD92E1D81DF210098161B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		118FD9301D81DF210098161B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		118FD9321D81DF210098161B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		118FD9301D81DF210098161B /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		118FD9351D81DF220098161B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		118FD9371D81DF220098161B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		118FD93A1D81DF220098161B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +64,17 @@
 		118FD9411D81DF220098161B /* BookChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		118FD9451D81DF220098161B /* BookChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookChallengeTests.swift; sourceTree = "<group>"; };
 		118FD9471D81DF220098161B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		118FD9501D81E3A00098161B /* MyBooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBooksViewController.swift; sourceTree = "<group>"; };
+		118FD9521D81EE100098161B /* ChallengeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeTableViewCell.swift; sourceTree = "<group>"; };
+		11C7A29B1D8DB36500155CD6 /* ChallengeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeTableViewController.swift; sourceTree = "<group>"; };
+		11C7A2A01D8DB96900155CD6 /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		11EC79731EC5C8F0001F30E7 /* AddBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
+		11EEB2FE1EBE69700026F68D /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		11EEB3001EBE6B6C0026F68D /* MyBooksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBooksTableViewController.swift; sourceTree = "<group>"; };
+		11EEB3021EBE6D950026F68D /* MyBooksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBooksTableViewCell.swift; sourceTree = "<group>"; };
+		11EEB3041EBE764E0026F68D /* SelectedBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedBookViewController.swift; sourceTree = "<group>"; };
+		1FCC682CAC971D821DBB4CA6 /* Pods-BookChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookChallenge/Pods-BookChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		B696F56BCCEFB3F4A3DAAE15 /* Pods_BookChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD91DE06ADB8C280C14EDE1 /* Pods_BookChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +96,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		111F02631EBFAE5D002A819D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				111F02641EBFAE7A002A819D /* LoginViewController.swift */,
+			);
+			name = Login;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		118FD9221D81DF210098161B = {
 			isa = PBXGroup;
 			children = (
+				111CF25F1EBF443B006AFDC3 /* GlobalVariables.swift */,
 				118FD92D1D81DF210098161B /* BookChallenge */,
 				118FD9441D81DF220098161B /* BookChallengeTests */,
 				118FD92C1D81DF210098161B /* Products */,
+				ECCDAFCAA35305FA67F0C754 /* Pods */,
+				7F223FAEFC7DE2E317F843AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,12 +129,14 @@
 		118FD92D1D81DF210098161B /* BookChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				118FD92E1D81DF210098161B /* AppDelegate.swift */,
-				118FD9301D81DF210098161B /* FirstViewController.swift */,
-				118FD9321D81DF210098161B /* SecondViewController.swift */,
+				111F02631EBFAE5D002A819D /* Login */,
 				118FD9341D81DF220098161B /* Main.storyboard */,
-				118FD9371D81DF220098161B /* Assets.xcassets */,
 				118FD9391D81DF220098161B /* LaunchScreen.storyboard */,
+				118FD92E1D81DF210098161B /* AppDelegate.swift */,
+				11C7A29F1D8DB90900155CD6 /* Status */,
+				11C7A29E1D8DB8F800155CD6 /* My Books */,
+				11C7A29D1D8DB8D300155CD6 /* Challenge */,
+				118FD9371D81DF220098161B /* Assets.xcassets */,
 				118FD93C1D81DF220098161B /* Info.plist */,
 			);
 			path = BookChallenge;
@@ -99,6 +151,54 @@
 			path = BookChallengeTests;
 			sourceTree = "<group>";
 		};
+		11C7A29D1D8DB8D300155CD6 /* Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				11C7A29B1D8DB36500155CD6 /* ChallengeTableViewController.swift */,
+				118FD9521D81EE100098161B /* ChallengeTableViewCell.swift */,
+				11C7A2A01D8DB96900155CD6 /* Challenge.swift */,
+			);
+			name = Challenge;
+			sourceTree = "<group>";
+		};
+		11C7A29E1D8DB8F800155CD6 /* My Books */ = {
+			isa = PBXGroup;
+			children = (
+				118FD9501D81E3A00098161B /* MyBooksViewController.swift */,
+				11EEB2FE1EBE69700026F68D /* Book.swift */,
+				11EEB3001EBE6B6C0026F68D /* MyBooksTableViewController.swift */,
+				11EEB3021EBE6D950026F68D /* MyBooksTableViewCell.swift */,
+				11EEB3041EBE764E0026F68D /* SelectedBookViewController.swift */,
+				11EC79731EC5C8F0001F30E7 /* AddBookViewController.swift */,
+			);
+			name = "My Books";
+			sourceTree = "<group>";
+		};
+		11C7A29F1D8DB90900155CD6 /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				118FD9301D81DF210098161B /* StatusViewController.swift */,
+			);
+			name = Status;
+			sourceTree = "<group>";
+		};
+		7F223FAEFC7DE2E317F843AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B696F56BCCEFB3F4A3DAAE15 /* Pods_BookChallenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECCDAFCAA35305FA67F0C754 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC682CAC971D821DBB4CA6 /* Pods-BookChallenge.debug.xcconfig */,
+				0DC705AA98115247028F5B3E /* Pods-BookChallenge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +206,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 118FD94A1D81DF220098161B /* Build configuration list for PBXNativeTarget "BookChallenge" */;
 			buildPhases = (
+				050CAF9BCD885C26810E3869 /* [CP] Check Pods Manifest.lock */,
 				118FD9271D81DF210098161B /* Sources */,
 				118FD9281D81DF210098161B /* Frameworks */,
 				118FD9291D81DF210098161B /* Resources */,
+				11BE93CB1EB5CEFB005E0317 /* Embed Frameworks */,
+				D7E9E08AF9192DED3CA92191 /* [CP] Embed Pods Frameworks */,
+				956C050D5148037EE35889F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,14 +248,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Krzysztof Kostrzewa";
 				TargetAttributes = {
 					118FD92A1D81DF210098161B = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 3C75CMFT8S;
+						LastSwiftMigration = 0830;
 					};
 					118FD9401D81DF220098161B = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0830;
 						TestTargetID = 118FD92A1D81DF210098161B;
 					};
 				};
@@ -195,14 +302,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		050CAF9BCD885C26810E3869 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		956C050D5148037EE35889F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BookChallenge/Pods-BookChallenge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7E9E08AF9192DED3CA92191 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BookChallenge/Pods-BookChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		118FD9271D81DF210098161B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				118FD9331D81DF210098161B /* SecondViewController.swift in Sources */,
+				111F02651EBFAE7A002A819D /* LoginViewController.swift in Sources */,
+				11EEB2FF1EBE69700026F68D /* Book.swift in Sources */,
 				118FD92F1D81DF210098161B /* AppDelegate.swift in Sources */,
-				118FD9311D81DF210098161B /* FirstViewController.swift in Sources */,
+				11EC79741EC5C8F0001F30E7 /* AddBookViewController.swift in Sources */,
+				11C7A2A11D8DB96900155CD6 /* Challenge.swift in Sources */,
+				118FD9511D81E3A00098161B /* MyBooksViewController.swift in Sources */,
+				118FD9311D81DF210098161B /* StatusViewController.swift in Sources */,
+				118FD9531D81EE100098161B /* ChallengeTableViewCell.swift in Sources */,
+				111CF2601EBF443B006AFDC3 /* GlobalVariables.swift in Sources */,
+				11EEB3051EBE764E0026F68D /* SelectedBookViewController.swift in Sources */,
+				11C7A29C1D8DB36500155CD6 /* ChallengeTableViewController.swift in Sources */,
+				11EEB3031EBE6D950026F68D /* MyBooksTableViewCell.swift in Sources */,
+				11EEB3011EBE6B6C0026F68D /* MyBooksTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +423,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -281,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -304,8 +471,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -321,9 +490,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -331,23 +501,33 @@
 		};
 		118FD94B1D81DF220098161B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FCC682CAC971D821DBB4CA6 /* Pods-BookChallenge.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3C75CMFT8S;
 				INFOPLIST_FILE = BookChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.BookChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		118FD94C1D81DF220098161B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DC705AA98115247028F5B3E /* Pods-BookChallenge.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3C75CMFT8S;
 				INFOPLIST_FILE = BookChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.BookChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -359,6 +539,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.BookChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BookChallenge.app/BookChallenge";
 			};
 			name = Debug;
@@ -371,6 +552,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.BookChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BookChallenge.app/BookChallenge";
 			};
 			name = Release;
@@ -394,6 +576,7 @@
 				118FD94C1D81DF220098161B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		118FD94D1D81DF220098161B /* Build configuration list for PBXNativeTarget "BookChallengeTests" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +585,7 @@
 				118FD94F1D81DF220098161B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
