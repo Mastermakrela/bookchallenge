@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		111CF2601EBF443B006AFDC3 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111CF25F1EBF443B006AFDC3 /* GlobalVariables.swift */; };
 		111F02651EBFAE7A002A819D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F02641EBFAE7A002A819D /* LoginViewController.swift */; };
+		115408C01EC710C2002C0C39 /* CreatorsBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115408BF1EC710C2002C0C39 /* CreatorsBioViewController.swift */; };
 		118FD92F1D81DF210098161B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118FD92E1D81DF210098161B /* AppDelegate.swift */; };
 		118FD9311D81DF210098161B /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118FD9301D81DF210098161B /* StatusViewController.swift */; };
 		118FD9361D81DF220098161B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118FD9341D81DF220098161B /* Main.storyboard */; };
@@ -52,8 +53,9 @@
 
 /* Begin PBXFileReference section */
 		0DC705AA98115247028F5B3E /* Pods-BookChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookChallenge/Pods-BookChallenge.release.xcconfig"; sourceTree = "<group>"; };
-		111CF25F1EBF443B006AFDC3 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		111CF25F1EBF443B006AFDC3 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalVariables.swift; path = ../GlobalVariables.swift; sourceTree = "<group>"; };
 		111F02641EBFAE7A002A819D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		115408BF1EC710C2002C0C39 /* CreatorsBioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatorsBioViewController.swift; sourceTree = "<group>"; };
 		118FD92B1D81DF210098161B /* BookChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		118FD92E1D81DF210098161B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		118FD9301D81DF210098161B /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +110,6 @@
 		118FD9221D81DF210098161B = {
 			isa = PBXGroup;
 			children = (
-				111CF25F1EBF443B006AFDC3 /* GlobalVariables.swift */,
 				118FD92D1D81DF210098161B /* BookChallenge */,
 				118FD9441D81DF220098161B /* BookChallengeTests */,
 				118FD92C1D81DF210098161B /* Products */,
@@ -129,6 +130,7 @@
 		118FD92D1D81DF210098161B /* BookChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				111CF25F1EBF443B006AFDC3 /* GlobalVariables.swift */,
 				111F02631EBFAE5D002A819D /* Login */,
 				118FD9341D81DF220098161B /* Main.storyboard */,
 				118FD9391D81DF220098161B /* LaunchScreen.storyboard */,
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				118FD9301D81DF210098161B /* StatusViewController.swift */,
+				115408BF1EC710C2002C0C39 /* CreatorsBioViewController.swift */,
 			);
 			name = Status;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				11EC79741EC5C8F0001F30E7 /* AddBookViewController.swift in Sources */,
 				11C7A2A11D8DB96900155CD6 /* Challenge.swift in Sources */,
 				118FD9511D81E3A00098161B /* MyBooksViewController.swift in Sources */,
+				115408C01EC710C2002C0C39 /* CreatorsBioViewController.swift in Sources */,
 				118FD9311D81DF210098161B /* StatusViewController.swift in Sources */,
 				118FD9531D81EE100098161B /* ChallengeTableViewCell.swift in Sources */,
 				111CF2601EBF443B006AFDC3 /* GlobalVariables.swift in Sources */,

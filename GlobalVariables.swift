@@ -8,7 +8,7 @@
 
 import Foundation
 
-var userID: Int = 1
+var userID: Int = -1
 
 // Universal category codes
 var categoryNumber = [

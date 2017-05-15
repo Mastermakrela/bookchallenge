@@ -21,23 +21,20 @@ class ChallengeTableViewCell: UITableViewCell {
             "challengeID" : challengeID,
             "done" : sender.isOn,
             "user_id" : userID,
-        ]
+            ]
         
         Alamofire.request("http://mastermakrela.eu/bookchallenge/ios/challenges/updateState.php", method: .post, parameters: parametesrs).responseString { response in
-//            print(response)
+            //            print(response)
         }
         
     }
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
+    
 }

@@ -16,8 +16,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func loginButton(_ sender: UIButton) {
@@ -81,15 +79,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
     // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("SEG")
         let tabBarController = segue.destination as! UITabBarController
         
         if let nextVC = tabBarController.viewControllers?[0] as? StatusViewController {

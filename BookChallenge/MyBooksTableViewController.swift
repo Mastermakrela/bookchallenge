@@ -30,16 +30,24 @@ class MyBooksTableViewController: UITableViewController {
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        books = [:]
-        loadBooks(category: category)
+    func goBack(){
+        self.navigationController?.popViewController(animated: true)
     }
     
-    
-    //    override func viewWillDisappear(_ animated: Bool) {
-    //        print("DISAPIR")
-    //    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        if category == "Recommended"{
+            let alert = UIAlertController(title: "Not implemented", message: "Will be avalible in the futre", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Go Back", style: UIAlertActionStyle.default, handler: {(action: UIAlertAction!) in self.goBack()}))
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+        
+        books = [:]
+        self.tableView.reloadData()
+        loadBooks(category: category)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -47,7 +55,6 @@ class MyBooksTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -70,7 +77,6 @@ class MyBooksTableViewController: UITableViewController {
     
     
     // MARK: - Get data from MySQL Server
-    
     func loadBooks(category: String){
         let url = "http://mastermakrela.eu/bookchallenge/ios/myBooks/getBooks.php?user_id=" + String(userID) + "&status=" + (categoryNumber[category] ?? "-1")
         
@@ -91,49 +97,8 @@ class MyBooksTableViewController: UITableViewController {
                 print(error)
                 break
             }
-            
-            
         }
-        
     }
-    
-    
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
     
     // MARK: - Navigation
     

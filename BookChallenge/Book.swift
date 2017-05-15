@@ -50,7 +50,7 @@ class Book {
                 let components = calendar.dateComponents([.day], from: start, to: end)
                 return components.day!
             }
-
+            
         }
         
     }

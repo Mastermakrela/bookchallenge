@@ -69,20 +69,29 @@ class SelectedBookViewController: UIViewController {
             "title" : book.title,
             "book_id" : String(book.id)!,
             "status" : (Int(book.status)!+1),
-        ]
+            ]
         
         
         switch book.status {
         case "0":
             parameters["start_date"] = dateFormatter.string(from: datePicker.date)
-            print(parameters)
             Alamofire.request("http://mastermakrela.eu/bookchallenge/ios/mybooks/moveToStarted.php", method: .post, parameters: parameters).responseString { response in
-//                print(response)
+                switch response.result {
+                case .success:
+                    self.navigationController?.popViewController(animated: true)
+                case .failure:
+                    break
+                }
             }
         case "1":
             parameters["end_date"] = dateFormatter.string(from: datePicker.date)
             Alamofire.request("http://mastermakrela.eu/bookchallenge/ios/mybooks/moveToFinished.php", method: .post, parameters: parameters).responseString { response in
-//                print(response)
+                switch response.result {
+                case .success:
+                    self.navigationController?.popViewController(animated: true)
+                case .failure:
+                    break
+                }
             }
         default: break
         }
@@ -99,7 +108,12 @@ class SelectedBookViewController: UIViewController {
         ]
         
         Alamofire.request("http://mastermakrela.eu/bookchallenge/ios/mybooks/deleteBook.php", method: .post, parameters: parameters).responseString { response in
-            //            print(response)
+            switch response.result {
+            case .success:
+                self.navigationController?.popViewController(animated: true)
+            case .failure:
+                break
+            }
         }
         
     }
@@ -107,18 +121,20 @@ class SelectedBookViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
-    /*
-     // MARK: - Navigation
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
+     if let nextVC = segue.destination as? MyBooksViewController {
+     nextVC.viewDidAppear(true)
      }
-     */
+     
+     }*/
+    
     
 }
