@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Kanna
 
 class CreatorsBioViewController: UIViewController {
     
@@ -17,10 +18,22 @@ class CreatorsBioViewController: UIViewController {
         super.viewDidLoad()
         
         
-        Alamofire.request("http://mastermakrela.eu/bookchallenge/ios/homeScreen/bio.txt").responseString { response in
+        Alamofire.request("http://mastermakrela.eu/bookchallenge/ios/homeScreen/bio.html").responseString(encoding: .utf8) { response in
             switch response.result {
             case .success(let value):
-                self.textView.text = value
+                
+                
+                if let doc = HTML(html: value, encoding: String.Encoding.utf8) {
+                    
+                    // Search for nodes by CSS
+                    for link in doc.css("html") {
+                        self.textView.text = link.text!
+
+                    }
+                    
+                }
+                
+                
                 break
             case .failure(let error):
                 print(error)
