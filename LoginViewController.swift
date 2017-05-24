@@ -13,9 +13,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var rememberMeSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if defaults.bool(forKey: "rememberMe"){
+            
+            if let username = defaults.string(forKey: "username"), let password = defaults.string(forKey: "password") {
+                usernameTextField.text = username
+                login(username: username, password: password)
+            }
+        }
+        
+        
+        
     }
     
     @IBAction func loginButton(_ sender: UIButton) {
@@ -32,31 +44,37 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
         } else {
             
-            let parametesrs: Parameters = [
-                "username" : usernameTextField.text!,
-                "password" : passwordTextField.text!
-            ]
-            
-            Alamofire.request("http://mastermakrela.eu/bookchallenge/ios/mobileLogin.php", method: .post, parameters: parametesrs).responseString { response in
-                if let id = Int(response.value!) {
-                    userID = id
-                    
-                    //TODO - Remember Me feature
-                    /*
-                    rememberMe.username = self.usernameTextField.text!
-                    rememberMe.password = self.passwordTextField.text!
-                    rememberMe.remember = true
-                    */
-                    
-                    self.performSegue(withIdentifier: "LoginSegue", sender: self.usernameTextField.text)
-                } else {
-                    let alert = UIAlertController(title: "Login Error", message: "Wrong Username or Password or account with this username does not exist", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                }
-            }
+            login(username: usernameTextField.text!, password: passwordTextField.text!)
             
         }
+    }
+    
+    private func login(username: String, password: String){
+        
+        let parametesrs: Parameters = [
+            "username" : username,
+            "password" : password
+        ]
+        
+        Alamofire.request("http://mastermakrela.eu/bookchallenge/ios/mobileLogin.php", method: .post, parameters: parametesrs).responseString { response in
+            if let id = Int(response.value!) {
+                userID = id
+                
+                //Remember Me
+                if self.rememberMeSwitch.isOn {
+                    defaults.set(self.usernameTextField.text!, forKey: "username")
+                    defaults.set(self.passwordTextField.text!, forKey: "password")
+                    defaults.set(self.rememberMeSwitch.isOn, forKey: "rememberMe")
+                }
+                
+                self.performSegue(withIdentifier: "LoginSegue", sender: self.usernameTextField.text)
+            } else {
+                let alert = UIAlertController(title: "Login Error", message: "Wrong Username or Password or account with this username does not exist", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+        
     }
     
     @IBAction func registerButton(_ sender: UIButton) {

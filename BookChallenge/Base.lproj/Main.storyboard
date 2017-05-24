@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ghU-8F-ZKR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ghU-8F-ZKR">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -89,12 +89,19 @@ You can also keep track of the books you want to read, started reading and finis
                                         </subviews>
                                     </stackView>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSs-L9-zcH">
-                                        <rect key="frame" x="117.5" y="382.5" width="85" height="30"/>
+                                        <rect key="frame" x="117" y="424.5" width="85" height="30"/>
                                         <state key="normal" title="Creators Bio"/>
                                         <connections>
                                             <segue destination="tkE-KL-wue" kind="popoverPresentation" popoverAnchorView="mSs-L9-zcH" id="r8p-2m-5eJ">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bV7-J4-BJ8">
+                                        <rect key="frame" x="132.5" y="384.5" width="55" height="30"/>
+                                        <state key="normal" title="Log Out"/>
+                                        <connections>
+                                            <action selector="logOutButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="aDl-oj-Hmv"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -105,6 +112,7 @@ You can also keep track of the books you want to read, started reading and finis
                                     <constraint firstItem="rfV-nF-nqv" firstAttribute="leading" secondItem="BXK-Om-jQ5" secondAttribute="leading" constant="20" symbolic="YES" id="Fly-K4-GfF"/>
                                     <constraint firstItem="rfV-nF-nqv" firstAttribute="top" secondItem="HDh-fz-mRl" secondAttribute="bottom" constant="10" id="H6E-8m-7d2"/>
                                     <constraint firstItem="EbO-CC-op1" firstAttribute="top" secondItem="BXK-Om-jQ5" secondAttribute="top" constant="20" id="N39-qX-zCO"/>
+                                    <constraint firstItem="mSs-L9-zcH" firstAttribute="top" secondItem="bV7-J4-BJ8" secondAttribute="bottom" constant="10" id="N5E-wb-ddc"/>
                                     <constraint firstAttribute="trailing" secondItem="rfV-nF-nqv" secondAttribute="trailing" constant="20" symbolic="YES" id="RHp-4U-Jcf"/>
                                     <constraint firstItem="VWS-dZ-psY" firstAttribute="top" secondItem="Crh-4j-GJw" secondAttribute="bottom" constant="10" id="S1b-3Z-KEc"/>
                                     <constraint firstAttribute="bottom" secondItem="EbO-CC-op1" secondAttribute="bottom" constant="719" id="SRS-Kt-4WM"/>
@@ -114,10 +122,11 @@ You can also keep track of the books you want to read, started reading and finis
                                     <constraint firstItem="hAX-5z-U6D" firstAttribute="top" secondItem="EbO-CC-op1" secondAttribute="bottom" constant="10" id="d9V-up-lCd"/>
                                     <constraint firstItem="Crh-4j-GJw" firstAttribute="leading" secondItem="BXK-Om-jQ5" secondAttribute="leading" constant="20" symbolic="YES" id="dGW-iF-45q"/>
                                     <constraint firstAttribute="trailing" secondItem="VWS-dZ-psY" secondAttribute="trailing" constant="20" symbolic="YES" id="eLq-6w-abC"/>
-                                    <constraint firstItem="mSs-L9-zcH" firstAttribute="top" secondItem="VWS-dZ-psY" secondAttribute="bottom" constant="8" id="elq-4X-8H4"/>
                                     <constraint firstItem="mSs-L9-zcH" firstAttribute="centerX" secondItem="BXK-Om-jQ5" secondAttribute="centerX" id="fhu-bs-buB"/>
                                     <constraint firstItem="EbO-CC-op1" firstAttribute="centerX" secondItem="BXK-Om-jQ5" secondAttribute="centerX" id="m20-La-N97"/>
+                                    <constraint firstItem="bV7-J4-BJ8" firstAttribute="centerX" secondItem="BXK-Om-jQ5" secondAttribute="centerX" id="pRa-Uo-Kbf"/>
                                     <constraint firstItem="Crh-4j-GJw" firstAttribute="top" secondItem="rfV-nF-nqv" secondAttribute="bottom" constant="10" id="rUw-Fa-QNs"/>
+                                    <constraint firstItem="bV7-J4-BJ8" firstAttribute="top" secondItem="VWS-dZ-psY" secondAttribute="bottom" constant="10" id="sHr-Kn-9Ki"/>
                                     <constraint firstAttribute="trailing" secondItem="hAX-5z-U6D" secondAttribute="trailing" constant="20" symbolic="YES" id="xyI-jg-gyq"/>
                                     <constraint firstAttribute="trailing" secondItem="EbO-CC-op1" secondAttribute="trailing" constant="20" id="ycv-yX-7Pk"/>
                                 </constraints>
@@ -141,9 +150,11 @@ You can also keep track of the books you want to read, started reading and finis
                         <outlet property="booksStackView" destination="VWS-dZ-psY" id="t7h-S0-U9d"/>
                         <outlet property="challengesCompleted" destination="rfV-nF-nqv" id="x0a-m7-y5r"/>
                         <outlet property="finishedLabel" destination="8bo-jD-Qsh" id="vgG-nA-QR6"/>
+                        <outlet property="logOutButton" destination="bV7-J4-BJ8" id="UQZ-j9-SeB"/>
                         <outlet property="startedLabel" destination="139-ou-CVO" id="QEO-qt-cfz"/>
                         <outlet property="toReadLabel" destination="Oml-Qw-DxJ" id="9Ka-om-1LJ"/>
                         <outlet property="username" destination="hAX-5z-U6D" id="eyK-dW-r0q"/>
+                        <segue destination="ghU-8F-ZKR" kind="show" identifier="LogOutSegue" id="68t-zQ-a8z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -653,14 +664,14 @@ You can also keep track of the books you want to read, started reading and finis
                         <viewControllerLayoutGuide type="bottom" id="7BH-ZE-IYQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fWz-i8-wqi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Et6-KL-aVN">
-                                <rect key="frame" x="-4" y="20" width="328" height="548"/>
+                                <rect key="frame" x="-4" y="20" width="328" height="731"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="GOG-vK-06h">
-                                        <rect key="frame" x="20" y="8" width="288" height="292"/>
+                                        <rect key="frame" x="20" y="8" width="288" height="328"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="JpL-9X-crx">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="53"/>
@@ -669,7 +680,7 @@ You can also keep track of the books you want to read, started reading and finis
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DIo-jX-O3E">
-                                                <rect key="frame" x="0.0" y="93" width="288" height="199"/>
+                                                <rect key="frame" x="0.0" y="93" width="288" height="235"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have to log in to use this app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crs-fN-2Vc">
                                                         <rect key="frame" x="0.0" y="0.0" width="288" height="18"/>
@@ -702,14 +713,28 @@ You can also keep track of the books you want to read, started reading and finis
                                                             <action selector="loginButton:" destination="ghU-8F-ZKR" eventType="touchUpInside" id="nKm-14-9eO"/>
                                                         </connections>
                                                     </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uJA-lv-s97">
+                                                        <rect key="frame" x="0.0" y="128" width="288" height="31"/>
+                                                        <subviews>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ve4-Nu-Sqs">
+                                                                <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                            </switch>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sU-QF-hat">
+                                                                <rect key="frame" x="59" y="0.0" width="229" height="31"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or you can register if you don't have the account yet" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzv-td-Pfe">
-                                                        <rect key="frame" x="0.0" y="128" width="288" height="36"/>
+                                                        <rect key="frame" x="0.0" y="164" width="288" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvm-AJ-ci4">
-                                                        <rect key="frame" x="0.0" y="169" width="288" height="30"/>
+                                                        <rect key="frame" x="0.0" y="205" width="288" height="30"/>
                                                         <state key="normal" title="Register"/>
                                                         <connections>
                                                             <action selector="registerButton:" destination="ghU-8F-ZKR" eventType="touchUpInside" id="h6i-X1-A3d"/>
@@ -741,6 +766,7 @@ You can also keep track of the books you want to read, started reading and finis
                     </view>
                     <connections>
                         <outlet property="passwordTextField" destination="q75-2T-MhX" id="yhC-kX-sv7"/>
+                        <outlet property="rememberMeSwitch" destination="Ve4-Nu-Sqs" id="6C9-rz-grc"/>
                         <outlet property="usernameTextField" destination="9iU-zu-ZHL" id="ysM-Sr-sfN"/>
                         <segue destination="49e-Tb-3d3" kind="show" identifier="LoginSegue" id="EQd-Zn-vrh"/>
                     </connections>

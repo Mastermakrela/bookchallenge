@@ -12,6 +12,7 @@ import AlamofireSwiftyJSON
 
 class StatusViewController: UIViewController {
     
+    @IBOutlet weak var logOutButton: UIButton!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var booksRead: UILabel!
     @IBOutlet weak var challengesCompleted: UILabel!
@@ -27,6 +28,10 @@ class StatusViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if defaults.bool(forKey: "rememberMe") {
+            logOutButton.isHidden = false
+        }
         
         if userID == 7 {
             bioButton.isHidden = false
@@ -58,7 +63,7 @@ class StatusViewController: UIViewController {
                 self.booksRead.text = "You have read " + String(sum) + " books"
                 self.toReadLabel.text = (results?["toRead"]?.stringValue)! + " Still waiting to be read."
                 self.startedLabel.text = (results?["started"]?.stringValue)! + " Started but not finished."
-                self.finishedLabel.text = (results?["finished"]?.stringValue)! + " Sompleted."
+                self.finishedLabel.text = (results?["finished"]?.stringValue)! + " Completed."
                 
                 break
             case .failure(let error):
@@ -67,6 +72,13 @@ class StatusViewController: UIViewController {
             
         }
         
+    }
+    
+    @IBAction func logOutButton(_ sender: Any) {
+        defaults.set(nil, forKey: "username")
+        defaults.set(nil, forKey: "password")
+        defaults.set(false, forKey: "rememberMe")
+        self.performSegue(withIdentifier: "LogOutSegue", sender: nil)
     }
     
     func booksTap() {

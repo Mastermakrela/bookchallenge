@@ -21,31 +21,5 @@ var categoryNumber = [
 
 let categories = ["To Read", "Started", "Finished"]
 
-// TODO - Implement Remember Me feature
-/*
-struct rememberMe {
-    static var username = ""
-    static var password = ""
-    static var remember = false
-}
-
-
-
-class Global {
-    
-    // MARK: Save rememberMe
-    private struct rememberMeKeys {
-        static let usernameKey = "usernameKey"
-        static let passwordKey = "passwordKey"
-        static let rememberKey = "rememberKey"
-    }
-    
-    static func saveRememberMe(){
-        UserDefaults.standard.set(rememberMe.username, forKey: rememberMeKeys.usernameKey)
-        UserDefaults.standard.set(rememberMe.password, forKey: rememberMeKeys.passwordKey)
-        UserDefaults.standard.set(rememberMe.remember, forKey: rememberMeKeys.rememberKey)
-    }
-    
-    
-}
-*/
+// Remember data between sessions
+let defaults = UserDefaults.standard
